@@ -44,44 +44,45 @@
             </li>
             <div><img src="./Images/shokpedia-logo.png" alt="shokpedia logo" class="logo"></div>
         </ul>
+    </nav>
+    <section id="global-cards">
+        <div class="global-cards">
+            <h2>מונחים כללים</h2>
+            <p>מונחים כללים שכל צריך להכיר</p>
 
-        <section id="global-cards">
-            <div class="global-cards">
-                <h2>מונחים כללים</h2>
-                <p>מונחים כללים שכל צריך להכיר</p>
-                <div class="box"><a href="./bidAndask.html"> (היצע וביקוש) Bid&Ask</a>
-                    <p>בעולם המסחר יש שני מושגים בסיסיים שכל משקיע צריך להבין bid ו ask</p>
-                </div>
-                <div class="box"><a href="./MarketCap.html"> (שווי שוק) Market Cap</a>
-                    <p>הערך שבו השוק כולו מתמחר את החברה על פי מניותיה.</p>
-                </div>
-                <p></p>
-                <div class="box"></div>
-                <div class="box"></div>
-                <br>
+            <div class="box"><a href="./bidAndask.html"> (היצע וביקוש) Bid&Ask</a>
+                <p>בעולם המסחר יש שני מושגים בסיסיים שכל משקיע צריך להבין bid ו ask</p>
             </div>
-        </section>
-        <p><s>s</s></p>
-        <footer>
-            <a href="https://github.com/omridigmi" target="_blank" aria-label="Github" rel="noreferrer" rel="noopener">
-                <img src="./Images/Omri-Digmi-Web-Developer-logo.png" alt="Omri digmi web developer logo"></a>
-            <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
-                Content and code on this site may not be copied or reused without permission.</p> <br>
-        </footer>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const toggleInput = document.getElementById('theme-toggle-slider');
-                const html = document.documentElement;
-                // Set initial state
-                if (html.getAttribute('data-theme') === 'dark') {
-                    toggleInput.checked = true;
-                }
-                toggleInput.addEventListener('change', function () {
-                    const newTheme = this.checked ? 'dark' : 'light';
-                    html.setAttribute('data-theme', newTheme);
-                });
+            <div class="box"><a href="./MarketCap.html"> (שווי שוק) Market Cap</a>
+                <p>הערך שבו השוק כולו מתמחר את החברה על פי מניותיה.</p>
+            </div>
+            <p></p>
+            <div class="box"></div>
+            <div class="box"></div>
+            <br>
+        </div>
+    </section>
+    <p></p>
+    <footer>
+        <a href="https://github.com/omridigmi" target="_blank" aria-label="Github" rel="noreferrer" rel="noopener">
+            <img src="./Images/Omri-Digmi-Web-Developer-logo.png" alt="Omri digmi web developer logo"></a>
+        <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
+            Content and code on this site may not be copied or reused without permission.</p> <br>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleInput = document.getElementById('theme-toggle-slider');
+            const html = document.documentElement;
+            // Set initial state
+            if (html.getAttribute('data-theme') === 'dark') {
+                toggleInput.checked = true;
+            }
+            toggleInput.addEventListener('change', function () {
+                const newTheme = this.checked ? 'dark' : 'light';
+                html.setAttribute('data-theme', newTheme);
             });
-        </script>
+        });
+    </script>
 </body>
 
 </html>

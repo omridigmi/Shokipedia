@@ -44,27 +44,27 @@
             </li>
             <div><img src="./Images/shokpedia-logo.png" alt="shokpedia logo" class="logo"></div>
         </ul>
-
-        <footer>
-            <a href="https://github.com/omridigmi" target="_blank" aria-label="Github" rel="noreferrer" rel="noopener">
-                <img src="./Images/Omri-Digmi-Web-Developer-logo.png" alt="Omri digmi web developer logo"></a>
-            <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
-                Content and code on this site may not be copied or reused without permission.</p> <br>
-        </footer>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const toggleInput = document.getElementById('theme-toggle-slider');
-                const html = document.documentElement;
-                // Set initial state
-                if (html.getAttribute('data-theme') === 'dark') {
-                    toggleInput.checked = true;
-                }
-                toggleInput.addEventListener('change', function () {
-                    const newTheme = this.checked ? 'dark' : 'light';
-                    html.setAttribute('data-theme', newTheme);
-                });
+    </nav>
+    <footer>
+        <a href="https://github.com/omridigmi" target="_blank" aria-label="Github" rel="noreferrer" rel="noopener">
+            <img src="./Images/Omri-Digmi-Web-Developer-logo.png" alt="Omri digmi web developer logo"></a>
+        <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
+            Content and code on this site may not be copied or reused without permission.</p> <br>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleInput = document.getElementById('theme-toggle-slider');
+            const html = document.documentElement;
+            // Set initial state
+            if (html.getAttribute('data-theme') === 'dark') {
+                toggleInput.checked = true;
+            }
+            toggleInput.addEventListener('change', function () {
+                const newTheme = this.checked ? 'dark' : 'light';
+                html.setAttribute('data-theme', newTheme);
             });
-        </script>
+        });
+    </script>
 </body>
 
 </html>

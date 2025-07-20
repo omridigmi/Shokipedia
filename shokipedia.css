@@ -417,6 +417,7 @@ p {
 
 
 #global-cards {
+    padding: 0;
     margin: 0 auto;
     width: 100vw;
     background: linear-gradient(120deg, var(--accent-color) 0%, var(--border-color) 50%, var(--link-color) 100%);
@@ -453,10 +454,13 @@ p {
 
 
     h2 {
+        font-weight: bolder;
+        word-spacing: 0.5em;
+        font-size: 3em;
         color: var(--text-color);
         padding-top: 50px;
         grid-column: 1 / 5;
-        grid-row: 1;
+        grid-row: 2;
         text-align: center;
         margin: 0 auto;
     }
@@ -467,6 +471,7 @@ p {
         grid-row: 2;
         text-align: center;
         margin: 0 auto;
+        line-height: 2;
     }
 
 
@@ -479,11 +484,6 @@ p {
         border: 1px solid #000;
         border-radius: 5px;
         text-align: center;
-        /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
         background: rgba(255, 255, 255, 0.25);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
