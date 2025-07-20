@@ -11,19 +11,24 @@
 <body>
     <nav>
         <ul>
-            <div><img src="./Images/shokpedia-logo.png" alt="shokpedia logo" class="logo"></div>
+            <li>
+                <label class="switch" title="Toggle dark mode">
+                    <input type="checkbox" id="theme-toggle-slider">
+                    <span class="slider">
+                        <span class="icon moon">🌙</span>
+                        <span class="icon sun">☀️</span>
+                    </span>
+                </label>
+            </li>
             <a href="./index.html"><img src="Images/home.png" alt="" class="home"></a>
             <li>
-                <button id="theme-toggle">🌙 Dark Mode</button>
-            </li>
-            <li>
-                <a href="">אסטרטגית מסחר</a>
+                <a href="./Strategies.html">אסטרטגית מסחר </a>
             </li>
             <li>
                 <a href="./ShokiOptions.html">אופציות</a>
             </li>
             <li>
-                <a href="">אינדיקטורים</a>
+                <a href="./Indicators.html">אינדיקטורים</a>
             </li>
             <li>
                 <a href="./stocks.html">מניות</a>
@@ -31,84 +36,91 @@
             <li>
                 <a href="#">מונחים בשוק ההון</a>
                 <ul class="opennav">
-                    <li><a href="./generalTerms.html">מונחים כללים</a></li>
+                    <li><a href="./General-Terms.html">מונחים כללים</a></li>
                     <li><a href="./optionTrem.html">מונחים באופציות ונגזרים</a></li>
                     <li><a href="#">מונחים גלובליים</a></li>
                     <li><a href="#">פסיכולגית מסחר</a></li>
                 </ul>
             </li>
+            <div><img src="./Images/shokpedia-logo.png" alt="shokpedia logo" class="logo"></div>
         </ul>
-    </nav>
-    <section id="bidAndask">
-        <header>
-            <h1>מה זה bid&ask</h1>
-            <p>בעולם המסחר (במניות,מטבעות,סחורות,ועוד,) יש שני מושגים בסיסיים שכל משקיע צריך להבין bid ו ask
-            </p>
-        </header>
-        <main>
-            <p>מחיר הקנייה - bid
-                המחיר שבו הקונה מוכן לרכוש נכס מסויים כרגע
-                אפשר לחשוב על זה כעל ההצעה הגבוהה ביותר שהקונה מוכן לשלם. כלומר זהו הסכום שמישהו אומר " אם תסכים אני
-                קונה
-                ממך עכשיו
-                במחיר הזה"<br>
-                דוגמא : אם הbid על מניית xyz הוא 100 דולר אז זה אומר שיש קונה שמוכן לקנות את המנייה במחיר הזה עכשיו.
-                מחיר המכירה -ask
-                הוא המחיר שבו המוכר מוכן למכור את הנכס שלו כרגע.
-                זהו המחיר הנמוך ביותר שמישהו מוכן למכור בו כלומר זהו הסכום שמישהו אומר " אם תסכים לשלם לי את המחיר הזה
-                אני
-                אמכור לך
-                עכשיו "<br>
-                דוגמא : אם הask של אותה מנייה הוא 100.20 זה אומר שיש מוכר שמוכן למכור את המנייה במחיר הזה.
-            </p>
-        </main>
-        <section>
-            <p><b>מה ההבדל בין ask ו bid ?</b></p>
-            <p>המחיר שהקונה מציע = bid
-                המחיר שהמוכר דורש = ask
-                הפער ביניהם = spread
-                בדוגמא שלנו :
-                יש לנו קונה ב100 בצד ה bid
-                ויש לנו מוכר ב100.20 בצד ה ask
-                אז נוצר לנו spread מרווח של 0.20 סנט
-            </p>
-            <p><b>מתי תתבצע העסקה ?</b></p>
-            <p>עסקה תתבצע כאשר: <br>
-                קונה מוכן לשלם את מחיר הask (המוכר מקבל את מה שביקש) <br>
-                ואו מוכר שמוכן לרדת למחיר הbid (הקונה מקבל את מה שביקש)</p>
-            <p><b>למה זה חשוב ?</b></p>
-            <p><b>הבנת המונחים bid&ask חשובה כי :
-                </b></p>
-            <ol>
-                <li>היא מאפשרת להבין כמה באמת תשלם או תקבל בעסקה</li>
-                <li>היא מלמדת על היצע וביקוש - ככל שהמרווח (spread) קטן יותר, כך השוק נחשב ליותר "נזיל" כלומר שיש בו
-                    הרבה
-                    קונים ומוכרים
-                    פעילים.</li>
-                <li>היא משפיעה על עלות עסקה בפועל בפקודת market קנייה בask ומכירה מיידית בbid עלולה לגרום להפסד אם יש
-                    פער
-                    ביינהם</li>
-            </ol>
+
+        <section id="bidAndask">
+            <header>
+                <h1>מה זה bid&ask</h1>
+                <p>בעולם המסחר (במניות,מטבעות,סחורות,ועוד,) יש שני מושגים בסיסיים שכל משקיע צריך להבין bid ו ask
+                </p>
+            </header>
+            <main>
+                <p>מחיר הקנייה - bid
+                    המחיר שבו הקונה מוכן לרכוש נכס מסויים כרגע
+                    אפשר לחשוב על זה כעל ההצעה הגבוהה ביותר שהקונה מוכן לשלם. כלומר זהו הסכום שמישהו אומר " אם תסכים אני
+                    קונה
+                    ממך עכשיו
+                    במחיר הזה"<br>
+                    דוגמא : אם הbid על מניית xyz הוא 100 דולר אז זה אומר שיש קונה שמוכן לקנות את המנייה במחיר הזה עכשיו.
+                    מחיר המכירה -ask
+                    הוא המחיר שבו המוכר מוכן למכור את הנכס שלו כרגע.
+                    זהו המחיר הנמוך ביותר שמישהו מוכן למכור בו כלומר זהו הסכום שמישהו אומר " אם תסכים לשלם לי את המחיר
+                    הזה
+                    אני
+                    אמכור לך
+                    עכשיו "<br>
+                    דוגמא : אם הask של אותה מנייה הוא 100.20 זה אומר שיש מוכר שמוכן למכור את המנייה במחיר הזה.
+                </p>
+            </main>
+            <section>
+                <p><b>מה ההבדל בין ask ו bid ?</b></p>
+                <p>המחיר שהקונה מציע = bid
+                    המחיר שהמוכר דורש = ask
+                    הפער ביניהם = spread
+                    בדוגמא שלנו :
+                    יש לנו קונה ב100 בצד ה bid
+                    ויש לנו מוכר ב100.20 בצד ה ask
+                    אז נוצר לנו spread מרווח של 0.20 סנט
+                </p>
+                <p><b>מתי תתבצע העסקה ?</b></p>
+                <p>עסקה תתבצע כאשר: <br>
+                    קונה מוכן לשלם את מחיר הask (המוכר מקבל את מה שביקש) <br>
+                    ואו מוכר שמוכן לרדת למחיר הbid (הקונה מקבל את מה שביקש)</p>
+                <p><b>למה זה חשוב ?</b></p>
+                <p><b>הבנת המונחים bid&ask חשובה כי :
+                    </b></p>
+                <ol>
+                    <li>היא מאפשרת להבין כמה באמת תשלם או תקבל בעסקה</li>
+                    <li>היא מלמדת על היצע וביקוש - ככל שהמרווח (spread) קטן יותר, כך השוק נחשב ליותר "נזיל" כלומר שיש בו
+                        הרבה
+                        קונים ומוכרים
+                        פעילים.</li>
+                    <li>היא משפיעה על עלות עסקה בפועל בפקודת market קנייה בask ומכירה מיידית בbid עלולה לגרום להפסד אם
+                        יש
+                        פער
+                        ביינהם</li>
+                </ol>
+            </section>
         </section>
-    </section>
 
 
-    <footer>
-        <a href="https://github.com/omridigmi" target="_blank" aria-label="Github" rel="noreferrer" rel="noopener">
-            <img src="./Images/Omri-Digmi-Web-Developer-logo.png" alt="Omri digmi web developer logo"></a>
-        <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
-            Content and code on this site may not be copied or reused without permission.</p> <br>
-    </footer>
-    <script>
-        const toggleButton = document.getElementById('theme-toggle');
-        toggleButton.addEventListener('click', () => {
-            const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            toggleButton.textContent = newTheme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode';
-        });
-    </script>
+        <footer>
+            <a href="https://github.com/omridigmi" target="_blank" aria-label="Github" rel="noreferrer" rel="noopener">
+                <img src="./Images/Omri-Digmi-Web-Developer-logo.png" alt="Omri digmi web developer logo"></a>
+            <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
+                Content and code on this site may not be copied or reused without permission.</p> <br>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggleInput = document.getElementById('theme-toggle-slider');
+                const html = document.documentElement;
+                // Set initial state
+                if (html.getAttribute('data-theme') === 'dark') {
+                    toggleInput.checked = true;
+                }
+                toggleInput.addEventListener('change', function () {
+                    const newTheme = this.checked ? 'dark' : 'light';
+                    html.setAttribute('data-theme', newTheme);
+                });
+            });
+        </script>
 </body>
 
 </html>

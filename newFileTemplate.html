@@ -11,19 +11,24 @@
 <body>
     <nav>
         <ul>
-            <div><img src="./Images/shokpedia-logo.png" alt="shokpedia logo" class="logo"></div>
+            <li>
+                <label class="switch" title="Toggle dark mode">
+                    <input type="checkbox" id="theme-toggle-slider">
+                    <span class="slider">
+                        <span class="icon moon">🌙</span>
+                        <span class="icon sun">☀️</span>
+                    </span>
+                </label>
+            </li>
             <a href="./index.html"><img src="Images/home.png" alt="" class="home"></a>
             <li>
-                <button id="theme-toggle">🌙 Dark Mode</button>
-            </li>
-            <li>
-                <a href="">אסטרטגית מסחר</a>
+                <a href="./Strategies.html">אסטרטגית מסחר </a>
             </li>
             <li>
                 <a href="./ShokiOptions.html">אופציות</a>
             </li>
             <li>
-                <a href="">אינדיקטורים</a>
+                <a href="./Indicators.html">אינדיקטורים</a>
             </li>
             <li>
                 <a href="./stocks.html">מניות</a>
@@ -37,23 +42,29 @@
                     <li><a href="#">פסיכולגית מסחר</a></li>
                 </ul>
             </li>
+            <div><img src="./Images/shokpedia-logo.png" alt="shokpedia logo" class="logo"></div>
         </ul>
-    </nav>
 
+    </nav>
     <footer>
         <a href="https://github.com/omridigmi" target="_blank" aria-label="Github" rel="noreferrer" rel="noopener">
             <img src="./Images/Omri-Digmi-Web-Developer-logo.png" alt="Omri digmi web developer logo"></a>
         <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
             Content and code on this site may not be copied or reused without permission.</p> <br>
     </footer>
+
     <script>
-        const toggleButton = document.getElementById('theme-toggle');
-        toggleButton.addEventListener('click', () => {
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleInput = document.getElementById('theme-toggle-slider');
             const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            toggleButton.textContent = newTheme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode';
+            // Set initial state
+            if (html.getAttribute('data-theme') === 'dark') {
+                toggleInput.checked = true;
+            }
+            toggleInput.addEventListener('change', function () {
+                const newTheme = this.checked ? 'dark' : 'light';
+                html.setAttribute('data-theme', newTheme);
+            });
         });
     </script>
 </body>
