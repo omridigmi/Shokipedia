@@ -162,11 +162,48 @@ body {
 }
 
 footer {
+    border-top: 1px solid var(--border-color);
+}
+
+.sitemap {
+    border: 0;
+    padding: 0;
+    margin: 0 auto;
+    width: var(--main-width);
+
+    h2 {
+        width: var(--main-width);
+        text-align: center;
+        font-size: var(--p-fsize);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-bottom: 5px;
+    }
+
+    ul {
+        margin: 0;
+
+        li {
+            list-style-type: none;
+
+            a {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: var(--p-fsize);
+                color: var(--link-color);
+            }
+        }
+    }
+}
+
+
+.credits {
+    padding: 0;
     display: flex;
     width: 100vw;
     text-align: center;
     position: absolute;
     border-top: 1px solid var(--border-color);
+    justify-content: center;
+    direction: ltr;
 
     img {
         height: 50px;
@@ -206,7 +243,7 @@ nav ul {
 }
 
 nav ul li {
-    /* position: relative; */
+    position: relative;
     margin: 0 15px;
 }
 
@@ -233,7 +270,7 @@ nav ul li ul.opennav {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
     min-width: 180px;
@@ -700,14 +737,22 @@ table {
 }
 
 @media (max-width:768px) {
-    body {}
+    body {
+        margin: 0 auto;
+    }
 
 
     :root {
         --main-width: 100vw;
     }
 
-    section {}
+    section,
+    main,
+    header {
+        width: var(--main-width);
+        margin: 0 auto;
+        padding: 20px 0;
+    }
 
 
     nav,
@@ -749,10 +794,8 @@ table {
         clear: none;
         padding: 0;
         margin: 0;
-        background-color: transparent;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: var(--bg-color);
+        border: 1px solid var(--border-color);
 
     }
 
@@ -762,23 +805,25 @@ table {
 
     }
 
+    nav ul li ul.opennav li {}
+
     nav ul li ul.opennav {
         font-size: var(--p-fsize);
         height: 20px;
-        top: 0;
-        right: 100%;
+        top: 100%;
+        position: absolute;
         display: none;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
         border-radius: 8px;
         min-width: 140px;
+        z-index: 102;
     }
 
     nav ul li:hover>ul.openmenu {
         display: block;
         display: flex;
         font-size: var(--p-fsize);
+        z-index: 102;
+
     }
 
     .sectionflex {
@@ -799,4 +844,5 @@ table {
         width: 90%;
         margin: 0 0 0 20% auto;
     }
+
 }
